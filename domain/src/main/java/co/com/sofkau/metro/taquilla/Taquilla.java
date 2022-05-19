@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Taquilla extends AggregateEvent<TaquillaId> {
     protected MaquinaTarjeta maquinaTarjeta;
-    protected Set<Empleado> empleado;
+    protected Set<EmpleadosTaquilla> empleado;
     protected Set<Factura> factura;
 
     public Taquilla(TaquillaId entityId) {
