@@ -7,8 +7,8 @@ import co.com.sofkau.metro.estacion.values.NombreEstacion;
 
 public class EmpleadoAgregado extends DomainEvent {
     private final EmpleadosEstacionId empleadosestacionid;
-    protected final NombreEstacion nombreestacion;
-    protected final Cargo cargo;
+    private final NombreEstacion nombreestacion;
+    private final Cargo cargo;
 
     public EmpleadoAgregado(EmpleadosEstacionId empleadosestacionid, NombreEstacion nombreestacion, Cargo cargo) {
         super("co.com.sofkau.metro.estacion.events.EmpleadoAgregado");

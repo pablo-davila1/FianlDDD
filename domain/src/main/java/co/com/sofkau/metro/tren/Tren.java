@@ -12,8 +12,13 @@ public class Tren extends AggregateEvent<TrenId> {
     protected Set<Mecanico>mecanico;
     protected Marca marca;
 
-    public Tren(TrenId entityId) {
+
+    public Tren(TrenId entityId, Conductor conductor, Set<Pasajero> pasajero, Set<Mecanico> mecanico, Marca marca) {
         super(entityId);
+        this.conductor = conductor;
+        this.pasajero = pasajero;
+        this.mecanico = mecanico;
+        this.marca = marca;
     }
 
     public Conductor getConductor() {

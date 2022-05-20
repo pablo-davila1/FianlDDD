@@ -6,8 +6,10 @@ import co.com.sofkau.metro.estacion.values.PesoMax;
 
 public class Ascensor extends Entity<AscensorId> {
     protected PesoMax pesomax;
-    public Ascensor(AscensorId entityId) {
+
+    public Ascensor(AscensorId entityId, PesoMax pesomax) {
         super(entityId);
+        this.pesomax = pesomax;
     }
 
     public PesoMax getPesomax() {

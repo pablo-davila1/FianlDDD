@@ -12,6 +12,14 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
     protected Set<Factura> factura;
     protected HoraApertura horaapertura;
 
+    public Taquilla(TaquillaId entityId, MaquinaTarjeta maquinaTarjeta, Set<EmpleadosTaquilla> empleado, Set<Factura> factura, HoraApertura horaapertura) {
+        super(entityId);
+        this.maquinaTarjeta = maquinaTarjeta;
+        this.empleado = empleado;
+        this.factura = factura;
+        this.horaapertura = horaapertura;
+    }
+
     public Taquilla(TaquillaId entityId) {
         super(entityId);
     }

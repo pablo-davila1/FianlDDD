@@ -8,8 +8,11 @@ import co.com.sofkau.metro.taquilla.values.TelefonoTaquilla;
 public class EmpleadosTaquilla extends Entity<EmpleadosTaquillaId> {
     protected NombreTaquilla nombretaquilla;
     protected TelefonoTaquilla telefonotaquilla;
-    public EmpleadosTaquilla(EmpleadosTaquillaId entityId) {
+
+    public EmpleadosTaquilla(EmpleadosTaquillaId entityId, NombreTaquilla nombretaquilla, TelefonoTaquilla telefonotaquilla) {
         super(entityId);
+        this.nombretaquilla = nombretaquilla;
+        this.telefonotaquilla = telefonotaquilla;
     }
 
     public NombreTaquilla getNombretaquilla() {

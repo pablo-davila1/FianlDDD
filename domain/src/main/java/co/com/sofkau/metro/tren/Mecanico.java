@@ -9,8 +9,10 @@ public class Mecanico extends Entity<MecanicoId> {
     protected NombreMecanico nombremecanico;
     protected TelefonoMecanico telefonomecanico;
 
-    public Mecanico(MecanicoId entityId) {
+    public Mecanico(MecanicoId entityId, NombreMecanico nombremecanico, TelefonoMecanico telefonomecanico) {
         super(entityId);
+        this.nombremecanico = nombremecanico;
+        this.telefonomecanico = telefonomecanico;
     }
 
     public NombreMecanico getNombremecanico() {

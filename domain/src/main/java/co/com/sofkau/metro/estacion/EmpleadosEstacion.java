@@ -8,8 +8,11 @@ import co.com.sofkau.metro.estacion.values.NombreEstacion;
 public class EmpleadosEstacion extends Entity<EmpleadosEstacionId> {
     protected NombreEstacion nombreEstacion;
     protected Cargo cargo;
-    public EmpleadosEstacion(EmpleadosEstacionId entityId) {
+
+    public EmpleadosEstacion(EmpleadosEstacionId entityId, NombreEstacion nombreEstacion, Cargo cargo) {
         super(entityId);
+        this.nombreEstacion = nombreEstacion;
+        this.cargo = cargo;
     }
 
     public NombreEstacion getNombreEstacion() {

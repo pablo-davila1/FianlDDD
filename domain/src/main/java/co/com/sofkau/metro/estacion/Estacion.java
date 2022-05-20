@@ -12,8 +12,12 @@ public class Estacion extends AggregateEvent<EstacionId>{
     protected Set<Torniquete>torniquete;
     protected Referencia referencia;
 
-    public Estacion(EstacionId entityId) {
+    public Estacion(EstacionId entityId, Set<EmpleadosEstacion> empleados, Ascensor ascensor, Set<Torniquete> torniquete, Referencia referencia) {
         super(entityId);
+        this.empleados = empleados;
+        this.ascensor = ascensor;
+        this.torniquete = torniquete;
+        this.referencia = referencia;
     }
 
     public Set<EmpleadosEstacion> getEmpleados() {

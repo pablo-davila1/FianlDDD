@@ -8,8 +8,11 @@ import co.com.sofkau.metro.taquilla.values.Usuario;
 public class MaquinaTarjeta extends Entity<MaquinaTarjetaId> {
     protected Usuario usuario;
     protected Saldo saldo;
-    public MaquinaTarjeta(MaquinaTarjetaId entityId) {
+
+    public MaquinaTarjeta(MaquinaTarjetaId entityId, Usuario usuario, Saldo saldo) {
         super(entityId);
+        this.usuario = usuario;
+        this.saldo = saldo;
     }
 
     public Saldo getSaldo() {

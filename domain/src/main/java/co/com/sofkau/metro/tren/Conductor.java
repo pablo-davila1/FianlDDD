@@ -8,8 +8,11 @@ import co.com.sofkau.metro.tren.values.Ruta;
 public class Conductor extends Entity<ConductorId> {
     protected NombreConductor nombretren;
     protected Ruta ruta;
-    public Conductor(ConductorId entityId) {
+
+    public Conductor(ConductorId entityId, NombreConductor nombretren, Ruta ruta) {
         super(entityId);
+        this.nombretren = nombretren;
+        this.ruta = ruta;
     }
 
     public NombreConductor getNombretren() {

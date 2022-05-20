@@ -12,6 +12,12 @@ public class Pasajero extends Entity<PasajeroId> {
         super(entityId);
     }
 
+    public Pasajero(PasajeroId entityId, NombrePasajero nombrepasajero, TelefonoPasajero telefonopasajero) {
+        super(entityId);
+        this.nombrepasajero = nombrepasajero;
+        this.telefonopasajero = telefonopasajero;
+    }
+
     public NombrePasajero getNombrepasajero() {
         return nombrepasajero;
     }
