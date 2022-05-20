@@ -7,7 +7,7 @@ import co.com.sofkau.metro.taquilla.EmpleadosTaquilla;
 import java.util.Set;
 
 public class Estacion extends AggregateEvent<EstacionId>{
-    protected Set<EmpleadosTaquilla> empleados;
+    protected Set<EmpleadosEstacion> empleados;
     protected Ascensor ascensor;
     protected Set<Torniquete>torniquete;
 
