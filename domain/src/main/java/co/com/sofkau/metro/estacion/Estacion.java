@@ -2,7 +2,7 @@ package co.com.sofkau.metro.estacion;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofkau.metro.estacion.values.EstacionId;
-import co.com.sofkau.metro.taquilla.EmpleadosTaquilla;
+import co.com.sofkau.metro.estacion.values.Referencia;
 
 import java.util.Set;
 
@@ -10,6 +10,7 @@ public class Estacion extends AggregateEvent<EstacionId>{
     protected Set<EmpleadosEstacion> empleados;
     protected Ascensor ascensor;
     protected Set<Torniquete>torniquete;
+    protected Referencia referencia;
 
     public Estacion(EstacionId entityId) {
         super(entityId);
@@ -25,5 +26,9 @@ public class Estacion extends AggregateEvent<EstacionId>{
 
     public Set<Torniquete> getTorniquete() {
         return torniquete;
+    }
+
+    public Referencia getReferencia() {
+        return referencia;
     }
 }
