@@ -13,4 +13,16 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
     public Taquilla(TaquillaId entityId) {
         super(entityId);
     }
+
+    public MaquinaTarjeta getMaquinaTarjeta() {
+        return maquinaTarjeta;
+    }
+
+    public Set<EmpleadosTaquilla> getEmpleado() {
+        return empleado;
+    }
+
+    public Set<Factura> getFactura() {
+        return factura;
+    }
 }

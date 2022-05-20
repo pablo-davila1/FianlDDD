@@ -14,4 +14,16 @@ public class Estacion extends AggregateEvent<EstacionId>{
     public Estacion(EstacionId entityId) {
         super(entityId);
     }
+
+    public Set<EmpleadosEstacion> getEmpleados() {
+        return empleados;
+    }
+
+    public Ascensor getAscensor() {
+        return ascensor;
+    }
+
+    public Set<Torniquete> getTorniquete() {
+        return torniquete;
+    }
 }

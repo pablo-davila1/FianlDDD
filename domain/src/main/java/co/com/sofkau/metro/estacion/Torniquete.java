@@ -13,4 +13,6 @@ public class Torniquete extends Entity<TorniqueteId> {
     public Registro getRegistro() {
         return registro;
     }
+
+
 }

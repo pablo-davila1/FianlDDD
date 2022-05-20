@@ -13,4 +13,16 @@ public class Tren extends AggregateEvent<TrenId> {
     public Tren(TrenId entityId) {
         super(entityId);
     }
+
+    public Conductor getConductor() {
+        return conductor;
+    }
+
+    public Set<Pasajero> getPasajero() {
+        return pasajero;
+    }
+
+    public Set<Mecanico> getMecanico() {
+        return mecanico;
+    }
 }
