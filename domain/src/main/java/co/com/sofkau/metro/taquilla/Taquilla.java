@@ -1,30 +1,31 @@
 package co.com.sofkau.metro.taquilla;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofkau.metro.estacion.EstacionEventChange;
+import co.com.sofkau.metro.estacion.events.EstacionCreada;
+import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
 import co.com.sofkau.metro.taquilla.values.HoraApertura;
 import co.com.sofkau.metro.taquilla.values.TaquillaId;
 
 import java.util.Set;
 
 public class Taquilla extends AggregateEvent<TaquillaId> {
-    protected MaquinaTarjeta maquinaTarjeta;
+    protected Set<MaquinaTarjeta> maquinaTarjeta;
     protected Set<EmpleadosTaquilla> empleado;
     protected Set<Factura> factura;
     protected HoraApertura horaapertura;
 
-    public Taquilla(TaquillaId entityId, MaquinaTarjeta maquinaTarjeta, Set<EmpleadosTaquilla> empleado, Set<Factura> factura, HoraApertura horaapertura) {
+    public Taquilla(TaquillaId entityId, Set<MaquinaTarjeta> maquinaTarjeta, Set<EmpleadosTaquilla> empleado, Set<Factura> factura, HoraApertura horaapertura) {
         super(entityId);
-        this.maquinaTarjeta = maquinaTarjeta;
-        this.empleado = empleado;
-        this.factura = factura;
-        this.horaapertura = horaapertura;
+        appendChange(new TaquillaCreada(horaapertura)).apply();
+        subscribe(new TaquillaEventChange(this));
     }
 
     public Taquilla(TaquillaId entityId) {
         super(entityId);
     }
 
-    public MaquinaTarjeta getMaquinaTarjeta() {
+    public Set<MaquinaTarjeta> getMaquinaTarjeta() {
         return maquinaTarjeta;
     }
 

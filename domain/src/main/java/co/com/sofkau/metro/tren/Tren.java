@@ -1,13 +1,16 @@
 package co.com.sofkau.metro.tren;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofkau.metro.taquilla.TaquillaEventChange;
+import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
+import co.com.sofkau.metro.tren.events.TrenCreado;
 import co.com.sofkau.metro.tren.values.Marca;
 import co.com.sofkau.metro.tren.values.TrenId;
 
 import java.util.Set;
 
 public class Tren extends AggregateEvent<TrenId> {
-    protected Conductor conductor;
+    protected Set<Conductor> conductor;
     protected Set<Pasajero> pasajero;
     protected Set<Mecanico>mecanico;
     protected Marca marca;
@@ -15,13 +18,11 @@ public class Tren extends AggregateEvent<TrenId> {
 
     public Tren(TrenId entityId, Conductor conductor, Set<Pasajero> pasajero, Set<Mecanico> mecanico, Marca marca) {
         super(entityId);
-        this.conductor = conductor;
-        this.pasajero = pasajero;
-        this.mecanico = mecanico;
-        this.marca = marca;
+        appendChange(new TrenCreado(marca)).apply();
+        subscribe(new TrenEventChange(this));
     }
 
-    public Conductor getConductor() {
+    public Set<Conductor> getConductor() {
         return conductor;
     }
 
