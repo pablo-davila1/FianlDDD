@@ -7,6 +7,9 @@ public class AscensorId extends Identity {
         super(id);
     }
 
+    public AscensorId() {
+    }
+
     public static AscensorId of(String id) {
         return new AscensorId(id);
     }

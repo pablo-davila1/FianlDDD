@@ -3,9 +3,14 @@ package co.com.sofkau.metro.taquilla;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofkau.metro.estacion.EstacionEventChange;
 import co.com.sofkau.metro.estacion.events.EstacionCreada;
+import co.com.sofkau.metro.estacion.events.MantenimientoTorniqueteHecho;
+import co.com.sofkau.metro.estacion.values.Registro;
+import co.com.sofkau.metro.estacion.values.TorniqueteId;
 import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
 import co.com.sofkau.metro.taquilla.values.HoraApertura;
+import co.com.sofkau.metro.taquilla.values.Saldo;
 import co.com.sofkau.metro.taquilla.values.TaquillaId;
+import co.com.sofkau.metro.taquilla.values.Usuario;
 
 import java.util.Set;
 
@@ -20,6 +25,9 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
         appendChange(new TaquillaCreada(horaapertura)).apply();
         subscribe(new TaquillaEventChange(this));
     }
+
+
+
 
     public Taquilla(TaquillaId entityId) {
         super(entityId);

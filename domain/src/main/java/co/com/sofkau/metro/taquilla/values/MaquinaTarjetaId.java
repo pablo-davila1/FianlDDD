@@ -7,6 +7,9 @@ public class MaquinaTarjetaId extends Identity {
         super(id);
     }
 
+    public MaquinaTarjetaId() {
+    }
+
     public static MaquinaTarjetaId of(String id) {
         return new MaquinaTarjetaId(id);
     }

@@ -7,6 +7,9 @@ public class EmpleadosEstacionId extends Identity {
         super(id);
     }
 
+    public EmpleadosEstacionId() {
+    }
+
     public static EmpleadosEstacionId of(String id) {
         return new EmpleadosEstacionId(id);
     }

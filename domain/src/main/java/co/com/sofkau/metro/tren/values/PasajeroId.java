@@ -7,6 +7,9 @@ public class PasajeroId extends Identity {
         super(id);
     }
 
+    public PasajeroId() {
+    }
+
     public static PasajeroId of(String id) {
         return new PasajeroId(id);
     }

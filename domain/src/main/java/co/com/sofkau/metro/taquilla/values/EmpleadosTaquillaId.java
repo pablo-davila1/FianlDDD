@@ -7,6 +7,9 @@ public class EmpleadosTaquillaId extends Identity {
         super(id);
     }
 
+    public EmpleadosTaquillaId() {
+    }
+
     public static EmpleadosTaquillaId of(String id) {
         return new EmpleadosTaquillaId(id);
     }

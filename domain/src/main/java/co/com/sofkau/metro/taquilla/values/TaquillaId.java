@@ -8,6 +8,9 @@ public class TaquillaId extends Identity {
         super(id);
     }
 
+    public TaquillaId() {
+    }
+
     public static TaquillaId of(String id) {
         return new TaquillaId(id);
     }

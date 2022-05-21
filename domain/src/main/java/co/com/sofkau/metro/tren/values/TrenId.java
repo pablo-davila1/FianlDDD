@@ -7,6 +7,9 @@ public class TrenId extends Identity {
         super(id);
     }
 
+    public TrenId() {
+    }
+
     public static TrenId of(String id) {
         return new TrenId(id);
     }

@@ -7,6 +7,9 @@ public class EstacionId extends Identity {
         super(id);
     }
 
+    public EstacionId() {
+    }
+
     public static EstacionId of(String id) {
         return new EstacionId(id);
     }

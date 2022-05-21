@@ -8,7 +8,7 @@ public class MantenimientoAscensorHecho extends DomainEvent {
     private final AscensorId ascensorid;
     private final PesoMax pesomax;
 
-    public MantenimientoAscensorHecho(String type, AscensorId ascensorid, PesoMax pesomax) {
+    public MantenimientoAscensorHecho(AscensorId ascensorid, PesoMax pesomax) {
         super("co.com.sofkau.metro.estacion.events.MantenimientoAscensorHecho");
         this.ascensorid = ascensorid;
         this.pesomax = pesomax;

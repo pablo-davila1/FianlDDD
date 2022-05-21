@@ -10,6 +10,7 @@ public class EmpleadoAgregado extends DomainEvent {
     private final NombreEstacion nombreestacion;
     private final Cargo cargo;
 
+
     public EmpleadoAgregado(EmpleadosEstacionId empleadosestacionid, NombreEstacion nombreestacion, Cargo cargo) {
         super("co.com.sofkau.metro.estacion.events.EmpleadoAgregado");
         this.empleadosestacionid = empleadosestacionid;

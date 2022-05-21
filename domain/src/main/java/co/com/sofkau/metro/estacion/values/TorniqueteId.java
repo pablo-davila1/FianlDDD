@@ -7,6 +7,9 @@ public class TorniqueteId extends Identity {
         super(id);
     }
 
+    public TorniqueteId() {
+    }
+
     public static TorniqueteId of(String id) {
         return new TorniqueteId(id);
     }

@@ -8,6 +8,9 @@ public class ConductorId extends Identity {
         super(id);
     }
 
+    public ConductorId() {
+    }
+
     public static ConductorId of(String id) {
         return new ConductorId(id);
     }

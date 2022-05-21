@@ -13,6 +13,7 @@ public class AgregarEmpleado extends Command {
         this.cargo = cargo;
     }
 
+
     public NombreEstacion getNombreestacion() {
         return nombreestacion;
     }
