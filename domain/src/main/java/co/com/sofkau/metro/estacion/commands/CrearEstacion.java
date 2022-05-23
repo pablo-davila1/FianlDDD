@@ -13,6 +13,7 @@ public class CrearEstacion extends Command {
         this.referencia = referencia;
     }
 
+
     public EstacionId getEstacionid() {
         return estacionid;
     }

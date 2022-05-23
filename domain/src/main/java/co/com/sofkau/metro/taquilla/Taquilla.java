@@ -1,12 +1,13 @@
 package co.com.sofkau.metro.taquilla;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
-import co.com.sofkau.metro.metro.taquilla.values.*;
 import co.com.sofkau.metro.taquilla.events.FacturaTaquillaMostrada;
 import co.com.sofkau.metro.taquilla.events.SaldoMaquinaAgregado;
 import co.com.sofkau.metro.taquilla.values.*;
 
+import java.util.List;
 import java.util.Set;
 
 public class Taquilla extends AggregateEvent<TaquillaId> {
@@ -15,11 +16,21 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
     protected Set<Factura> factura;
     protected HoraApertura horaapertura;
 
-    public Taquilla(TaquillaId entityId, Set<MaquinaTarjeta> maquinaTarjeta, Set<EmpleadosTaquilla> empleado, Set<Factura> factura, HoraApertura horaapertura) {
+    public Taquilla(TaquillaId entityId, HoraApertura horaapertura) {
         super(entityId);
         appendChange(new TaquillaCreada(horaapertura)).apply();
         subscribe(new TaquillaEventChange(this));
     }
+    public Taquilla(TaquillaId entityId) {
+        super(entityId);
+        subscribe(new TaquillaEventChange(this));
+    }
+    public static Taquilla from(TaquillaId entityId, List<DomainEvent> events){
+        var taquilla = new Taquilla(entityId);
+        events.forEach(taquilla::applyEvent);
+        return taquilla;
+    }
+
 
     public void agregarSaldo(Usuario usuario, Saldo saldo) {
         var maquinaId = new MaquinaTarjetaId();
@@ -31,9 +42,6 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
         appendChange(new FacturaTaquillaMostrada(facturaId, monto)).apply();
     }
 
-    public Taquilla(TaquillaId entityId) {
-        super(entityId);
-    }
 
     public Set<MaquinaTarjeta> getMaquinaTarjeta() {
         return maquinaTarjeta;
