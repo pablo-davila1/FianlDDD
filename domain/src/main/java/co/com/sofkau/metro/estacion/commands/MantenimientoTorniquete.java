@@ -2,7 +2,6 @@ package co.com.sofkau.metro.estacion.commands;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.metro.estacion.values.Registro;
-import co.com.sofkau.metro.estacion.values.TorniqueteId;
 
 public class MantenimientoTorniquete extends Command {
     private Registro registro;

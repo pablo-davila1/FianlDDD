@@ -1,16 +1,11 @@
 package co.com.sofkau.metro.taquilla;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofkau.metro.estacion.EstacionEventChange;
-import co.com.sofkau.metro.estacion.events.EstacionCreada;
-import co.com.sofkau.metro.estacion.events.MantenimientoTorniqueteHecho;
-import co.com.sofkau.metro.estacion.values.Registro;
-import co.com.sofkau.metro.estacion.values.TorniqueteId;
 import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
-import co.com.sofkau.metro.taquilla.values.HoraApertura;
-import co.com.sofkau.metro.taquilla.values.Saldo;
-import co.com.sofkau.metro.taquilla.values.TaquillaId;
-import co.com.sofkau.metro.taquilla.values.Usuario;
+import co.com.sofkau.metro.metro.taquilla.values.*;
+import co.com.sofkau.metro.taquilla.events.FacturaTaquillaMostrada;
+import co.com.sofkau.metro.taquilla.events.SaldoMaquinaAgregado;
+import co.com.sofkau.metro.taquilla.values.*;
 
 import java.util.Set;
 
@@ -26,8 +21,15 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
         subscribe(new TaquillaEventChange(this));
     }
 
+    public void agregarSaldo(Usuario usuario, Saldo saldo) {
+        var maquinaId = new MaquinaTarjetaId();
+        appendChange(new SaldoMaquinaAgregado(maquinaId, usuario,saldo)).apply();
+    }
 
-
+    public void mostrarFactura(Monto monto) {
+        var facturaId = new FacturaId();
+        appendChange(new FacturaTaquillaMostrada(facturaId, monto)).apply();
+    }
 
     public Taquilla(TaquillaId entityId) {
         super(entityId);

@@ -8,7 +8,13 @@ import co.com.sofkau.metro.taquilla.values.TelefonoTaquilla;
 public class TelefonoEmpleadocambiado extends DomainEvent {
     private final EmpleadosTaquillaId empleadostaquillaid;
     private final NombreTaquilla nombretaquilla;
-    private final TelefonoTaquilla telefonotaquilla;
+
+    //Para settiar
+    public void setTelefonotaquilla(TelefonoTaquilla telefonotaquilla) {
+        this.telefonotaquilla = telefonotaquilla;
+    }
+
+    private  TelefonoTaquilla telefonotaquilla;
 
     public TelefonoEmpleadocambiado(String type, EmpleadosTaquillaId empleadostaquillaid, NombreTaquilla nombretaquilla, TelefonoTaquilla telefonotaquilla) {
         super("co.com.sofkau.metro.taquilla.events.TelefonoEmpleadocambiado");

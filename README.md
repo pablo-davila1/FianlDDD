@@ -1,8 +1,8 @@
-# Implementacion-DDD-IUPB-Facultad
+# RetoFinalDDD
 
+Adjunto link para visualizar en youtube el viideo mio, explicando el analisis y la implemtancion dle reto final DDD
 
-Adjunto los link tanto del video en youtube explicando la implementacion, como el link del diagrama
+Link youtube: https://youtu.be/SLBBFFoTK_A
 
-Link video:  https://youtu.be/mryPfdV7Axs
+Link para ver el analisis en el diagrama: https://drive.google.com/file/d/188rbjjxZcGvIihubp_SwskoddEfg_JQZ/view?usp=sharing
 
-Link diagrama: https://drive.google.com/file/d/19_SvlPj-Fp-6abOsTbYKHfLqiDmVgcwQ/view?usp=sharing

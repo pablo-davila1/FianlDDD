@@ -1,7 +1,6 @@
 package co.com.sofkau.metro.taquilla.commands;
 
 import co.com.sofka.domain.generic.Command;
-import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
 import co.com.sofkau.metro.taquilla.values.HoraApertura;
 import co.com.sofkau.metro.taquilla.values.TaquillaId;
 

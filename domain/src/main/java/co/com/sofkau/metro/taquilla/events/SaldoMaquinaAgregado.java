@@ -10,7 +10,7 @@ public class SaldoMaquinaAgregado extends DomainEvent {
     private final Usuario usuario;
     private final Saldo saldo;
 
-    public SaldoMaquinaAgregado(String type, MaquinaTarjetaId maquinatarjetaid, Usuario usuario, Saldo saldo) {
+    public SaldoMaquinaAgregado(MaquinaTarjetaId maquinatarjetaid, Usuario usuario, Saldo saldo) {
         super("co.com.sofkau.metro.taquilla.events.SaldoMaquinaAgregado");
         this.maquinatarjetaid = maquinatarjetaid;
         this.usuario = usuario;

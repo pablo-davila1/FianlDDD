@@ -1,14 +1,10 @@
 package co.com.sofkau.metro.estacion;
 
 import co.com.sofka.domain.generic.EventChange;
-import co.com.sofkau.metro.estacion.commands.MantenimientoTorniquete;
 import co.com.sofkau.metro.estacion.events.EmpleadoAgregado;
 import co.com.sofkau.metro.estacion.events.EstacionCreada;
 import co.com.sofkau.metro.estacion.events.MantenimientoAscensorHecho;
 import co.com.sofkau.metro.estacion.events.MantenimientoTorniqueteHecho;
-import co.com.sofkau.metro.estacion.values.EmpleadosEstacionId;
-import co.com.sofkau.metro.estacion.values.Registro;
-import co.com.sofkau.metro.estacion.values.TorniqueteId;
 
 import java.util.HashSet;
 import java.util.Set;

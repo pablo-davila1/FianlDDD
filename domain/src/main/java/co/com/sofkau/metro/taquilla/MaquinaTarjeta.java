@@ -1,9 +1,9 @@
 package co.com.sofkau.metro.taquilla;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofkau.metro.taquilla.values.MaquinaTarjetaId;
 import co.com.sofkau.metro.taquilla.values.Saldo;
 import co.com.sofkau.metro.taquilla.values.Usuario;
+import co.com.sofkau.metro.taquilla.values.MaquinaTarjetaId;
 
 public class MaquinaTarjeta extends Entity<MaquinaTarjetaId> {
     protected Usuario usuario;

@@ -2,8 +2,8 @@ package co.com.sofkau.metro.tren;
 
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofkau.metro.tren.values.ConductorId;
-import co.com.sofkau.metro.tren.values.NombreConductor;
 import co.com.sofkau.metro.tren.values.Ruta;
+import co.com.sofkau.metro.tren.values.NombreConductor;
 
 public class Conductor extends Entity<ConductorId> {
     protected NombreConductor nombretren;

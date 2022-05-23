@@ -8,7 +8,7 @@ public class FacturaTaquillaMostrada extends DomainEvent {
     private final FacturaId facturaid;
     private final Monto monto;
 
-    public FacturaTaquillaMostrada(String type, FacturaId facturaid, Monto monto) {
+    public FacturaTaquillaMostrada(FacturaId facturaid, Monto monto) {
         super("co.com.sofkau.metro.taquilla.events.FacturaTaquillaMostrada");
         this.facturaid = facturaid;
         this.monto = monto;

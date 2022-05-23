@@ -1,11 +1,9 @@
 package co.com.sofkau.metro.tren;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofkau.metro.taquilla.TaquillaEventChange;
-import co.com.sofkau.metro.taquilla.events.TaquillaCreada;
 import co.com.sofkau.metro.tren.events.TrenCreado;
-import co.com.sofkau.metro.tren.values.Marca;
 import co.com.sofkau.metro.tren.values.TrenId;
+import co.com.sofkau.metro.tren.values.Marca;
 
 import java.util.Set;
 

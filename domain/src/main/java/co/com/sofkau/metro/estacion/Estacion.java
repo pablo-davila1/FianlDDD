@@ -1,12 +1,12 @@
 package co.com.sofkau.metro.estacion;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofkau.metro.estacion.commands.AgregarEmpleado;
 import co.com.sofkau.metro.estacion.events.EmpleadoAgregado;
 import co.com.sofkau.metro.estacion.events.EstacionCreada;
 import co.com.sofkau.metro.estacion.events.MantenimientoAscensorHecho;
 import co.com.sofkau.metro.estacion.events.MantenimientoTorniqueteHecho;
 import co.com.sofkau.metro.estacion.values.*;
+import co.com.sofkau.metro.metro.estacion.values.*;
 
 import java.util.Set;
 
