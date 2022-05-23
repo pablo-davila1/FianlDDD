@@ -16,7 +16,7 @@ public class TelefonoEmpleadocambiado extends DomainEvent {
 
     private  TelefonoTaquilla telefonotaquilla;
 
-    public TelefonoEmpleadocambiado(String type, EmpleadosTaquillaId empleadostaquillaid, NombreTaquilla nombretaquilla, TelefonoTaquilla telefonotaquilla) {
+    public TelefonoEmpleadocambiado( EmpleadosTaquillaId empleadostaquillaid, NombreTaquilla nombretaquilla, TelefonoTaquilla telefonotaquilla) {
         super("co.com.sofkau.metro.taquilla.events.TelefonoEmpleadocambiado");
         this.empleadostaquillaid = empleadostaquillaid;
         this.nombretaquilla = nombretaquilla;

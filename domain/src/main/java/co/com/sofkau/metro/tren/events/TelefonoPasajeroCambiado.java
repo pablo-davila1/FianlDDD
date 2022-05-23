@@ -10,7 +10,7 @@ public class TelefonoPasajeroCambiado extends DomainEvent {
     private final NombrePasajero nombrepasajero;
     private final TelefonoPasajero telefonopasajero;
 
-    public TelefonoPasajeroCambiado(String type, PasajeroId pasajeroid, NombrePasajero nombrepasajero, TelefonoPasajero telefonopasajero) {
+    public TelefonoPasajeroCambiado( PasajeroId pasajeroid, NombrePasajero nombrepasajero, TelefonoPasajero telefonopasajero) {
         super("co.com.sofkau.metro.tren.events.TelefonoPasajeroCambiado");
         this.pasajeroid = pasajeroid;
         this.nombrepasajero = nombrepasajero;

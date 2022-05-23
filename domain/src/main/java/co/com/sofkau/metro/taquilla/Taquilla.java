@@ -32,6 +32,7 @@ public class Taquilla extends AggregateEvent<TaquillaId> {
     }
 
 
+
     public void agregarSaldo(Usuario usuario, Saldo saldo) {
         var maquinaId = new MaquinaTarjetaId();
         appendChange(new SaldoMaquinaAgregado(maquinaId, usuario,saldo)).apply();

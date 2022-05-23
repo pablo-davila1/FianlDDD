@@ -12,6 +12,7 @@ public class Ascensor extends Entity<AscensorId> {
         this.pesomax = pesomax;
     }
 
+
     public PesoMax getPesomax() {
         return pesomax;
     }

@@ -1,9 +1,7 @@
 package co.com.sofkau.metro.taquilla.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.metro.taquilla.values.MaquinaTarjetaId;
-import co.com.sofkau.metro.taquilla.values.Saldo;
-import co.com.sofkau.metro.taquilla.values.Usuario;
+import co.com.sofkau.metro.taquilla.values.*;
 
 public class SaldoMaquinaAgregado extends DomainEvent {
     private final MaquinaTarjetaId maquinatarjetaid;

@@ -33,12 +33,4 @@ public class TrenEventChange extends EventChange {
 
     }
 
-    /*
-    apply((FacturaTaquillaMostrada event)->{
-        var facturaId = event.getFacturaid();
-        var facturaTaquilla =new Factura(facturaId, event.getMonto());
-        taquilla.factura = (Set<Factura>) facturaTaquilla;
-    });
-
-     */
 }
